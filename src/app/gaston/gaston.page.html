@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>gaston</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">gaston</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button (click)="setOpen(true)">Click Me</ion-button>
+<ion-alert
+  [isOpen]="isAlertOpen"
+  header="A Short Title Is Best"
+  subHeader="A Sub Header Is Optional"
+  message="A message should be a short, complete sentence."
+  [buttons]="alertButtons"
+  (didDismiss)="setOpen(false)"
+></ion-alert>
+</ion-content>
